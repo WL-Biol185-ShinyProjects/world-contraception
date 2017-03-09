@@ -23,6 +23,12 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Rproj.user
+<<<<<<< HEAD
 *.Rproj*
 data
 03-data-wrangling.Rmd
+=======
+
+#bitignore
+*.Rproj*
+>>>>>>> 127c7f35a7b4e5ea11956c5a9a9c40f263526d14

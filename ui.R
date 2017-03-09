@@ -12,9 +12,9 @@ fluidPage(
       sliderInput("bins",
                   "Number of bins:",
                   min = 1,
-                  max = 100,
-                  value = 30),
-      actionButton(bins, label, icon = NULL, width = NULL)),
+                  max = 50,
+                  value = 30)
+    ),
     
     # Show a plot of the generated distribution
     mainPanel(
