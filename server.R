@@ -18,12 +18,16 @@ shinyServer(function(input, output) {
 
 library(tidyverse)
 library(dplyr)
+
 Adult_lit_rate <- filter(World_Development_Indicators_4, Series_Name == "Adult_lit_rate_pop_15plusyears_both_sexes_percent")
 tidy_Adult_lit_rate <- gather(Adult_lit_rate, key = "year", value = "Adult_lit_rate_pop_15plusyears_both_sexes_percent", `1960`:`2016`)
+
 Birth_rate <- filter(World_Development_Indicators_4, Series_Name == "Birth_rate_crude_per_1000_ppl")
 tidy_Birth_rate <- gather(Birth_rate, key = "year", value = "Birth_rate_crude_per_1000_ppl", `1960`:`2016`)
+
 GDP <- filter(World_Development_Indicators_4, Series_Name == "GDP_currentUsd")
 tidy_GDP<- gather(GDP, key = "year", value = "GDP_currentUsd", `1960`:`2016`)
+
 Life_expect <- filter(World_Development_Indicators_4, Series_Name == "Life_expectancy_at_birth_total_years")
 tidy_Life_expect <- gather(Life_expect, key = "year", value = "Life_expectancy_at_birth_total_years", `1960`:`2016`)
 
@@ -32,3 +36,18 @@ tidy_mat_death_risk <- gather(Maternal_death_risk, key = "year", value = "Lifeti
 
 Pop_growth <- filter(World_Development_Indicators_4, Series_Name == "Population_growth_annualpercent")
 tidy_pop_growth <- gather(Pop_growth, key = "year", value = "Population_growth_annualpercent", `1960`:`2016`)
+
+Adult_Birth <- full_join(tidy_Adult_lit_rate, tidy_Birth_rate, by = c("Country_Name", "Country_Code", "year"))
+
+tidy_Adult_lit_rate$Series_Name <- NULL
+tidy_Birth_rate$Series_Name <- NULL
+tidy_GDP$Series_Name <- NULL
+tidy_Life_expect$Series_Name <- NULL
+tidy_mat_death_risk$Series_Name <- NULL
+tidy_pop_growth$Series_Name <- NULL
+
+Adult_Birth <- full_join(tidy_Adult_lit_rate, tidy_Birth_rate, by = c("Country_Name", "Country_Code", "year"))
+Adult_Birth_GDP <- full_join(Adult_Birth, tidy_GDP, by = c("Country_Name", "Country_Code", "year"))
+Adult_Birth_GDP_LifeExp <- full_join(Adult_Birth_GDP, tidy_Life_expect, by = c("Country_Name", "Country_Code", "year"))
+Adult_Birth_GDP_LifeExp_MatDeath <- full_join(Adult_Birth_GDP_LifeExp, tidy_mat_death_risk, by = c("Country_Name", "Country_Code", "year"))
+Final_World_Develp_Indicators <- full_join(Adult_Birth_GDP_LifeExp_MatDeath, tidy_pop_growth, by = c("Country_Name", "Country_Code", "year"))
