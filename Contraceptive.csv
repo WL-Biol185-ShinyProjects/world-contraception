@@ -1,4 +1,4 @@
-Country,Latitude,Longitude,ISO,Year,Age_group,Population,All_methods,Modern_Methods,Female_sterilization,Male_sterilization,IUD,Implant,Injectable,Pill,Male_condom,Female_condom,Vaginal_barrier,LAM,Emergency_contraception,Traditional_method,Rhythm,Withdrawal,Unmet_need
+Country,lat,lon,ISO,Year,Age_group,Population,All_methods,Modern_Methods,Female_sterilization,Male_sterilization,IUD,Implant,Injectable,Pill,Male_condom,Female_condom,Vaginal_barrier,LAM,Emergency_contraception,Traditional_method,Rhythm,Withdrawal,Unmet_need
 Afghanistan,33.93911,67.709953,4,1974,15-44,EM,1.6,1.6,..,..,0.4,..,..,1,..,..,0.2,..,..,..,..,..,..
 Afghanistan,33.93911,67.709953,4,2000,Dec-49,MW,5.3,3.6,0.8,0.1,0.3,..,1.3,1.2,..,..,..,..,..,1.2,0.4,0.5,..
 Afghanistan,33.93911,67.709953,4,2003,<50,MW,10.3,8.7,..,..,..,..,2.2,5,0.6,..,..,..,..,1.6,..,..,..
