@@ -1,6 +1,8 @@
 # world-contraception
 Differences in contraception use around the world
 
+<<<<<<< HEAD
+=======
 Hello, it's me
 
 #importing dataset
@@ -18,3 +20,5 @@ tidyWorldData <- function(table) {
   colnames(tidy) <- tolower(colnames(tidy))
   
 }
+
+
