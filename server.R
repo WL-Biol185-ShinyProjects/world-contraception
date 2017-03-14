@@ -17,12 +17,18 @@ shinyServer(function(input, output) {
 })
 
 library(tidyverse)
-World_Development_Indicators_3$GDP_in_USd <- 0
-tidyWorldDvelopSpreaded <- spread(World_Development_Indicators_3, key = "GDP_in_USd", value = "GDP (current US$)", fill = NA, convert = FALSE, drop = FALSE, sep = NULL)
-tidyWorldDevelop <- gather(World_Development_Indicators_3, key = "year", value = "GDP (current US$)", 5:61)
+library(dplyr)
+Adult_lit_rate <- filter(World_Development_Indicators_4, Series_Name == "Adult_lit_rate_pop_15plusyears_both_sexes_percent")
+tidy_Adult_lit_rate <- gather(Adult_lit_rate, key = "year", value = "Adult_lit_rate_pop_15plusyears_both_sexes_percent", `1960`:`2016`)
+Birth_rate <- filter(World_Development_Indicators_4, Series_Name == "Birth_rate_crude_per_1000_ppl")
+tidy_Birth_rate <- gather(Birth_rate, key = "year", value = "Birth_rate_crude_per_1000_ppl", `1960`:`2016`)
+GDP <- filter(World_Development_Indicators_4, Series_Name == "GDP_currentUsd")
+tidy_GDP<- gather(GDP, key = "year", value = "GDP_currentUsd", `1960`:`2016`)
+Life_expect <- filter(World_Development_Indicators_4, Series_Name == "Life_expectancy_at_birth_total_years")
+tidy_Life_expect <- gather(Life_expect, key = "year", value = "Life_expectancy_at_birth_total_years", `1960`:`2016`)
 
+Maternal_death_risk <- filter(World_Development_Indicators_4, Series_Name == "Lifetime_risk_of_mat_death_percent")
+tidy_mat_death_risk <- gather(Maternal_death_risk, key = "year", value = "Lifetime_risk_of_mat_death_percent", `1960`:`2016`)
 
-tidyWorldDevelop2 <- gather(tidyWorldDevelop, key = "year", value = "Adult literacy rate, population 15+ years, both sexes (%)", 5:61)
-tidyWorldDevelop3 <- gather(tidyWorldDevelop2, key = "year", value = "Lifetime risk of maternal death (%)", 5:61)
-tidyWorldDevelop4 <- gather(tidyWorldDevelop3, key = "year", value = "Adult literacy rate, population 15+ years, both sexes (%)", 5:61)
-tidyWorldDevelop5 <- gather(tidyWorldDevelop4, key = "year", value = "Birth rate, crude (per 1,000 people)", 5:61)
+Pop_growth <- filter(World_Development_Indicators_4, Series_Name == "Population_growth_annualpercent")
+tidy_pop_growth <- gather(Pop_growth, key = "year", value = "Population_growth_annualpercent", `1960`:`2016`)
