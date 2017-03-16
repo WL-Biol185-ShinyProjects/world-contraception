@@ -61,4 +61,9 @@ setNames(Final_World_Develp_Indicators, "country_name", "country")
 colnames(Final_World_Develp_Indicators)[colnames(Final_World_Develp_Indicators)=="country_name"] <- "country"
 as.character(Contraceptive, "year")
 as.character(Final_World_Develp_Indicators, "year")
-world_data <- inner_join(Final_World_Develp_Indicators, Contraceptive, by = c("year", "country"))
+
+Contraceptive$yearcharacter <- as.character(Contraceptive$year)
+Final_World_Develp_Indicators$yearcharacter <- as.character(Final_World_Develp_Indicators$year)
+world_data <- inner_join(Final_World_Develp_Indicators, Contraceptive, by = c("yearcharacter", "country"))
+
+
