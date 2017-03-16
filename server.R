@@ -66,4 +66,36 @@ Contraceptive$yearcharacter <- as.character(Contraceptive$year)
 Final_World_Develp_Indicators$yearcharacter <- as.character(Final_World_Develp_Indicators$year)
 world_data <- inner_join(Final_World_Develp_Indicators, Contraceptive, by = c("yearcharacter", "country"))
 
+write.table(world_data, file = "world_data.txt")
+read.table("world_data.txt")
 
+#Map
+
+library(shiny)
+library(leaflet)
+
+r_colors <- rgb(t(col2rgb(colors()) / 255))
+names(r_colors) <- colors()
+
+ui <- fluidPage(
+  leafletOutput("mymap"),
+  p(),
+  actionButton("recalc", "New points")
+)
+
+server <- function(input, output, session) {
+  
+  points <- eventReactive(input$recalc, {
+    cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
+  }, ignoreNULL = FALSE)
+  
+  output$mymap <- renderLeaflet({
+    leaflet() %>%
+      addProviderTiles(providers$Stamen.TonerLite,
+                       options = providerTileOptions(noWrap = TRUE)
+      ) %>%
+      addMarkers(data = points())
+  })
+}
+
+shinyApp(ui, server)
