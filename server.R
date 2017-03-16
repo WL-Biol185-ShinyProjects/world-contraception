@@ -51,3 +51,14 @@ Adult_Birth_GDP <- full_join(Adult_Birth, tidy_GDP, by = c("Country_Name", "Coun
 Adult_Birth_GDP_LifeExp <- full_join(Adult_Birth_GDP, tidy_Life_expect, by = c("Country_Name", "Country_Code", "year"))
 Adult_Birth_GDP_LifeExp_MatDeath <- full_join(Adult_Birth_GDP_LifeExp, tidy_mat_death_risk, by = c("Country_Name", "Country_Code", "year"))
 Final_World_Develp_Indicators <- full_join(Adult_Birth_GDP_LifeExp_MatDeath, tidy_pop_growth, by = c("Country_Name", "Country_Code", "year"))
+
+read.table("Final_World_Develop_Indicators.txt")
+
+colnames(Contraceptive) <- tolower(colnames(Contraceptive))
+colnames(Final_World_Develp_Indicators) <- tolower(colnames(Final_World_Develp_Indicators))
+setNames(Final_World_Develp_Indicators, "country_name", "country")
+?setNames
+colnames(Final_World_Develp_Indicators)[colnames(Final_World_Develp_Indicators)=="country_name"] <- "country"
+as.character(Contraceptive, "year")
+as.character(Final_World_Develp_Indicators, "year")
+world_data <- inner_join(Final_World_Develp_Indicators, Contraceptive, by = c("year", "country"))
