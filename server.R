@@ -1,21 +1,4 @@
 library(shiny)
-
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
-  
-  output$distPlot <- renderPlot({
-    
-    # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    
-  })
-  
-})
-
 library(tidyverse)
 library(dplyr)
 
@@ -99,3 +82,23 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+# Download .shp file on the web:
+download.file("http://thematicmapping.org/downloads/TM_WORLD_BORDERS_SIMPL-0.3.zip" , destfile="world_shape_file.zip")
+system("unzip world_shape_file.zip")
+# Read the file with rgdal
+library(rgdal)
+world_spdf=readOGR( dsn= getwd() , layer="TM_WORLD_BORDERS_SIMPL-0.3")
+
+
