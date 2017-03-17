@@ -84,16 +84,6 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 
-
-1
-2
-3
-4
-5
-6
-7
-8
-
 # Download .shp file on the web:
 download.file("http://thematicmapping.org/downloads/TM_WORLD_BORDERS_SIMPL-0.3.zip" , destfile="world_shape_file.zip")
 system("unzip world_shape_file.zip")
