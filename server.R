@@ -73,4 +73,7 @@ map_data <- joinCountryData2Map(world_data,
                                 nameJoinColumn = "country")
 mapCountryData(map_data, nameColumnToPlot = "unmet_need")
 
+#Example from World Bank data
+source("https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/wdi-leaflet/wdi_leaflet.R")
+wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
 
