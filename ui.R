@@ -1,24 +1,20 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
-fluidPage(
-  
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot")
-    )
-  )
-)
+library(shiny)
+library(leaflet)
+
+#Maptrial
+
+library(ggplot2)
+library(rgeos)
+library(maptools)
+library(fields)
+library(rworldmap)
+library("mapdata")
+install.packages("rworldmap")
+library(rworldmap)
+data(world_data)
+map_data <- joinCountryData2Map(world_data,
+                                joinCode = "NAME",
+                                nameJoinColumn = "country")
+mapCountryData(map_data, nameColumnToPlot = "unmet_need")
