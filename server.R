@@ -84,11 +84,8 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 
-# Download .shp file on the web:
-download.file("http://thematicmapping.org/downloads/TM_WORLD_BORDERS_SIMPL-0.3.zip" , destfile="world_shape_file.zip")
-system("unzip world_shape_file.zip")
-# Read the file with rgdal
-library(rgdal)
-world_spdf=readOGR( dsn= getwd() , layer="TM_WORLD_BORDERS_SIMPL-0.3")
+#Jake's attempt
+
+
 
 
