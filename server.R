@@ -84,8 +84,6 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 
-#Jake's attempt
-
 
 
 
