@@ -74,6 +74,7 @@ map_data <- joinCountryData2Map(world_data,
 mapCountryData(map_data, nameColumnToPlot = "unmet_need")
 
 #Example from World Bank data
+<<<<<<< HEAD
 install.packages("mapdata")
 source("https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/wdi-leaflet/wdi_leaflet.R")
 wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
@@ -83,3 +84,13 @@ wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
 library(rworldmap)
 library(manipulate)
 map_data <- joinCountryData2Map(world_data, joinCode = "ISO3", nameJoinColumn = "country")
+=======
+installed.packages("mapdata")
+source("https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/wdi-leaflet/wdi_leaflet.R")
+wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
+
+#New Map Try (Jake)
+library(rgdal)
+
+countries <- 
+>>>>>>> fb08cc9e19778dbd495a77831cf531685690a2ec
