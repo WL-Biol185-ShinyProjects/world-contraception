@@ -84,7 +84,7 @@ wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
 library(rworldmap)
 library(manipulate)
 map_data <- joinCountryData2Map(world_data, joinCode = "ISO3", nameJoinColumn = "country")
-=======
+
 installed.packages("mapdata")
 source("https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/wdi-leaflet/wdi_leaflet.R")
 wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
@@ -92,5 +92,30 @@ wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
 #New Map Try (Jake)
 library(rgdal)
 
-countries <- 
->>>>>>> fb08cc9e19778dbd495a77831cf531685690a2ec
+
+#geoJSON functioning example
+
+map <- rgdal::readOGR("countries.geo.json", "OGRGeoJSON")
+map@data$value <- runif(180, 0, 100)
+
+
+library(leaflet)
+
+bins <- seq(0, 108, 12)
+pal  <- colorBin("YlOrRd", map@data$value, bins)
+
+leaflet(data = map) %>%
+  addTiles()        %>%
+  addPolygons(fillColor = ~pal(value))
+
+#Fix world_data file to match geoJSON
+
+library(dplyr)
+?spread
+?dplyr
+browseVignettes(package = "dplyr")
+
+#attempt at spreading data
+library(tidyr)
+sprd_adult_lit <- spread(tidy_Adult_lit_rate, year, Adult_lit_rate_pop_15plusyears_both_sexes_percent)
+
