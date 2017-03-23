@@ -119,3 +119,4 @@ browseVignettes(package = "dplyr")
 library(tidyr)
 sprd_adult_lit <- spread(tidy_Adult_lit_rate, year, Adult_lit_rate_pop_15plusyears_both_sexes_percent)
 
+write.csv(world_data, "world_data.csv")
