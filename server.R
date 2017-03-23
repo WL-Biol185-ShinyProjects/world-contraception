@@ -74,7 +74,7 @@ map_data <- joinCountryData2Map(world_data,
 mapCountryData(map_data, nameColumnToPlot = "unmet_need")
 
 #Example from World Bank data
-<<<<<<< HEAD
+
 install.packages("mapdata")
 source("https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/wdi-leaflet/wdi_leaflet.R")
 wdi_leaflet("SP.DYN.LE00.IN", "Life expectancy at birth", 1980, 6, "RdYlGn")
@@ -121,3 +121,40 @@ sprd_adult_lit <- spread(tidy_Adult_lit_rate, year, Adult_lit_rate_pop_15plusyea
 
 write.csv(world_data, "world_data.csv")
 View("countries.geo.json")
+
+#Data wrangling of economically active persons
+
+library(tidyr)
+tidy_econ_active_ppl <- spread(economically_active_persons, Gender, percent_economically_active, fill = NA, convert = FALSE)
+tidy_econ_active_ppl$`<NA>` <- NULL
+tidy_econ_active_ppl_2 <- tidy_econ_active_ppl[-1,]
+tidy_econ_active_ppl_3 <- tidy_econ_active_ppl_2[-57,]
+final_econ_activity <- tidy_econ_active_ppl_3
+View(map)
+colnames(final_econ_activity)[colnames(final_econ_activity)=="Country"] <- "name"
+colnames(final_econ_activity)[colnames(final_econ_activity)=="Females"] <- "econ_activity_women"
+colnames(final_econ_activity)[colnames(final_econ_activity)=="Males"] <- "econ_activity_men"
+
+
+#Data wrangling of literacy rates
+
+library(tidyr)
+tidy_lit_rates <- spread(literacy_rates, Gender, literacy_rate, fill = NA, convert = FALSE)
+tidy_lit_rates$`<NA>` <- NULL
+tidy_lit_rates_2 <- tidy_lit_rates[-1,]
+tidy_lit_rates_3 <- tidy_lit_rates_2[-57,]
+final_lit_rates <- tidy_lit_rates_3
+View(map)
+colnames(final_lit_rates)[colnames(final_lit_rates)=="Country"] <- "name"
+colnames(final_lit_rates)[colnames(final_lit_rates)=="Females"] <- "lit_rate_women"
+colnames(final_lit_rates)[colnames(final_lit_rates)=="Males"] <- "lit_rate_men"
+
+
+#join literacy rates and econ activity
+
+library(dplyr)
+lit_rates_econ_activity <- left_join(final_econ_activity, final_lit_rates, by="name")
+
+#join data sets for final table
+
+final_data <- left_join(final_world_contraception, lit_rates_econ_activity, by="name")
