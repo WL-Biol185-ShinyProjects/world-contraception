@@ -77,6 +77,9 @@ mapCountryData(map_data, nameColumnToPlot = "unmet_need")
 #geoJSON functioning example
 
 map <- rgdal::readOGR("countries.geo.json", "OGRGeoJSON")
+View(map)
+map@data$value <- "test"
+map@data$all_contraception_methods <- final_data$all_methods
 map@data$value <- runif(180, 0, 100)
 
 View(map)
