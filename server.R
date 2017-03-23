@@ -158,3 +158,4 @@ lit_rates_econ_activity <- left_join(final_econ_activity, final_lit_rates, by="n
 #join data sets for final table
 
 final_data <- left_join(final_world_contraception, lit_rates_econ_activity, by="name")
+write.table(final_data, "final_data.csv")
