@@ -98,7 +98,7 @@ library(rgdal)
 map <- rgdal::readOGR("countries.geo.json", "OGRGeoJSON")
 map@data$value <- runif(180, 0, 100)
 
-
+View(map)
 library(leaflet)
 
 bins <- seq(0, 108, 12)
@@ -120,3 +120,4 @@ library(tidyr)
 sprd_adult_lit <- spread(tidy_Adult_lit_rate, year, Adult_lit_rate_pop_15plusyears_both_sexes_percent)
 
 write.csv(world_data, "world_data.csv")
+View("countries.geo.json")
