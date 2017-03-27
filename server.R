@@ -187,3 +187,9 @@ pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins)
 
 leaflet(data = map) %>%
   addPolygons(fillColor = ~pal(all_contraception_methods))
+
+#attempt to remove percents from data
+
+updated_maps_data <- maps_ready_data[,all_contraception_methods] <- as.numeric(sub("%", "", maps_ready_data[,all_contraception_methods]))
+#need to convert percentages in maps_ready_data and then add columns back into maps
+
