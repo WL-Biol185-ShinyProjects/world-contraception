@@ -175,3 +175,15 @@ map@data$female_econ_activity <- maps_ready_data$"econ_activity_women"
 map@data$male_econ_activity <- maps_ready_data$"econ_activity_men"
 map@data$female_lit_rate <- maps_ready_data$"lit_rate_women"
 map@data$male_lit_rate <- maps_ready_data$"lit_rate_men"
+
+
+#Attempt to make a map
+
+View(map)
+library(leaflet)
+
+bins <- seq(0, 100, 10)
+pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins)
+
+leaflet(data = map) %>%
+  addPolygons(fillColor = ~pal(all_contraception_methods))
