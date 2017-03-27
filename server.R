@@ -143,3 +143,16 @@ lit_rates_econ_activity <- left_join(final_econ_activity, final_lit_rates, by="n
 
 final_data <- left_join(final_world_contraception, lit_rates_econ_activity, by="name")
 write.table(final_data, "final_data.csv")
+
+#add columns to map GEOJSON
+
+View(map)
+map$`<value>` <- NULL
+map@data$value <- "test"
+map@data$all_contraception_methods <- final_data$"all_methods"
+final_data_no_Andora <- final_data[-4,]
+
+
+#attempt to solve the problem with merging maps and our data
+
+maps_ready_data <- left_join(map_names, final_data, by="name")
