@@ -156,3 +156,22 @@ final_data_no_Andora <- final_data[-4,]
 #attempt to solve the problem with merging maps and our data
 
 maps_ready_data <- left_join(map_names, final_data, by="name")
+write.table(maps_ready_data, "maps_ready_data.csv")
+map@data$all_contraception_methods <- maps_ready_data$"all_methods"
+map@data$modern_contraception_methods <- maps_ready_data$"modern_methods"
+map@data$adolescent_fertility_rate <- maps_ready_data$"adolescence_fertility_rate"
+map@data$birth_rate <- maps_ready_data$"birth_rate"
+map@data$death_rate <- maps_ready_data$"death_rate"
+map@data$infant_mortality_rate <- maps_ready_data$"infant_mortality_rate"
+map@data$fertility_rate <- maps_ready_data$"fertility_rate"
+map@data$work_force_ratio <- maps_ready_data$"workforce_ratio"
+map@data$maternal_deaths <- maps_ready_data$"maternal_deaths"
+map@data$male_life_expectancy <- maps_ready_data$"male_life_expectancy"
+map@data$female_life_expectancy <- maps_ready_data$"female_life_expectancy"
+map@data$gdp <- maps_ready_data$"gdp"
+map@data$male_labor_force_participation <- maps_ready_data$"male_laborforce_participation"
+map@data$female_labor_force_participation <- maps_ready_data$"female_laborforce_participation"
+map@data$female_econ_activity <- maps_ready_data$"econ_activity_women"
+map@data$male_econ_activity <- maps_ready_data$"econ_activity_men"
+map@data$female_lit_rate <- maps_ready_data$"lit_rate_women"
+map@data$male_lit_rate <- maps_ready_data$"lit_rate_men"
