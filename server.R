@@ -191,5 +191,10 @@ leaflet(data = map) %>%
 #attempt to remove percents from data
 
 updated_maps_data <- maps_ready_data[,all_contraception_methods] <- as.numeric(sub("%", "", maps_ready_data[,all_contraception_methods]))
+updated_maps_data <- as.numeric(sub("%","",maps_ready_data))/100
+View(updated_maps_data)
 #need to convert percentages in maps_ready_data and then add columns back into maps
+
+#export data file
+write.csv(maps_ready_data, "maps_ready_data.csv")
 
