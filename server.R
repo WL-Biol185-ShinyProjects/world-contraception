@@ -273,3 +273,6 @@ map@data$male_econ_activity <- maps_ready_data$"econ_activity_men_n"
 map@data$female_lit_rate <- maps_ready_data$"lit_rate_women_n"
 map@data$male_lit_rate <- maps_ready_data$"lit_rate_men_n"
 
+saveRDS(map, file = "geoJSON_map.rds")
+geoJSON_map <- readRDS("geoJSON_map.rds")
+View(geoJSON_map)
