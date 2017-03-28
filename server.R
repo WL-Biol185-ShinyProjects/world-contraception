@@ -198,3 +198,77 @@ View(updated_maps_data)
 #export data file
 write.csv(maps_ready_data, "maps_ready_data.csv")
 
+#new attempt to change percentages
+
+library(dplyr)
+maps_ready_data_no_percent <- as.numeric(sub("%", "",maps_ready_data$all_methods,fixed=TRUE))/100
+
+all_methods_n <- gsub("%", "", maps_ready_data$all_methods, fixed=TRUE)
+maps_ready_data$all_methods_n <- as.numeric(all_methods_n)/100
+maps_ready_data$all_methods <- NULL
+
+modern_methods_n <- gsub("%", "", maps_ready_data$modern_methods, fixed=TRUE)
+maps_ready_data$modern_methods_n <- as.numeric(modern_methods_n)/100
+maps_ready_data$modern_methods <- NULL
+
+male_labor_force_participation_n <- gsub("%", "", maps_ready_data$male_laborforce_participation, fixed=TRUE)
+maps_ready_data$male_labor_force_participation_n <- as.numeric(male_labor_force_participation_n)/100
+maps_ready_data$male_laborforce_participation <- NULL
+
+female_labor_force_participation_n <- gsub("%", "", maps_ready_data$female_laborforce_participation, fixed=TRUE)
+maps_ready_data$female_labor_force_participation_n <- as.numeric(female_labor_force_participation_n)/100
+maps_ready_data$female_laborforce_participation <- NULL
+
+econ_activity_women_n <- gsub("%", "", maps_ready_data$econ_activity_women, fixed=TRUE)
+maps_ready_data$econ_activity_women_n <- as.numeric(econ_activity_women_n)/100
+maps_ready_data$econ_activity_women <- NULL
+
+econ_activity_men_n <- gsub("%", "", maps_ready_data$econ_activity_men, fixed=TRUE)
+maps_ready_data$econ_activity_men_n <- as.numeric(econ_activity_men_n)/100
+maps_ready_data$econ_activity_men <- NULL
+
+lit_rate_women_n <- gsub("%", "", maps_ready_data$lit_rate_women, fixed=TRUE)
+maps_ready_data$lit_rate_women_n <- as.numeric(lit_rate_women_n)/100
+maps_ready_data$lit_rate_women <- NULL
+
+lit_rate_men_n <- gsub("%", "", maps_ready_data$lit_rate_men, fixed=TRUE)
+maps_ready_data$lit_rate_men_n <- as.numeric(lit_rate_men_n)/100
+maps_ready_data$lit_rate_men <- NULL
+
+
+gdp_n <- gsub("$", "", as.character(maps_ready_data$gdp), fixed=TRUE)
+gdp_n2 <- gsub(",", "", gdp_n, fixed=TRUE)
+maps_ready_data$gdp_n2 <- as.numeric(gdp_n2)
+maps_ready_data$gdp <- NULL
+maps_ready_data$gdp_n <- NULL
+
+maps_ready_data$adolescence_fertility_rate <- as.numeric(maps_ready_data$adolescence_fertility_rate)
+maps_ready_data$birth_rate <- as.numeric(maps_ready_data$birth_rate)
+maps_ready_data$death_rate <- as.numeric(maps_ready_data$death_rate)
+maps_ready_data$infant_mortality_rate <- as.numeric(maps_ready_data$infant_mortality_rate)
+maps_ready_data$fertility_rate <- as.numeric(maps_ready_data$fertility_rate)
+maps_ready_data$maternal_deaths <- as.numeric(maps_ready_data$maternal_deaths)
+maps_ready_data$male_life_expectancy <- as.numeric(maps_ready_data$male_life_expectancy)
+maps_ready_data$female_life_expectancy <- as.numeric(maps_ready_data$female_life_expectancy)
+maps_ready_data$workforce_ratio <- as.numeric(maps_ready_data$workforce_ratio)
+
+#re-add everything to the map with geoJSON
+map@data$all_contraception_methods <- maps_ready_data$"all_methods_n"
+View(map)
+map@data$modern_contraception_methods <- maps_ready_data$"modern_methods_n"
+map@data$adolescent_fertility_rate <- maps_ready_data$"adolescence_fertility_rate"
+map@data$birth_rate <- maps_ready_data$"birth_rate"
+map@data$death_rate <- maps_ready_data$"death_rate"
+map@data$infant_mortality_rate <- maps_ready_data$"infant_mortality_rate"
+map@data$fertility_rate <- maps_ready_data$"fertility_rate"
+map@data$work_force_ratio <- maps_ready_data$"workforce_ratio"
+map@data$maternal_deaths <- maps_ready_data$"maternal_deaths"
+map@data$male_life_expectancy <- maps_ready_data$"male_life_expectancy"
+map@data$female_life_expectancy <- maps_ready_data$"female_life_expectancy"
+map@data$gdp <- maps_ready_data$"gdp_n2"
+map@data$male_labor_force_participation <- maps_ready_data$"male_labor_force_participation_n"
+map@data$female_labor_force_participation <- maps_ready_data$"female_labor_force_participation_n"
+map@data$female_econ_activity <- maps_ready_data$"econ_activity_women_n"
+map@data$male_econ_activity <- maps_ready_data$"econ_activity_men_n"
+map@data$female_lit_rate <- maps_ready_data$"lit_rate_women_n"
+map@data$male_lit_rate <- maps_ready_data$"lit_rate_men_n"
