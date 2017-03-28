@@ -276,3 +276,6 @@ map@data$male_lit_rate <- maps_ready_data$"lit_rate_men_n"
 saveRDS(map, file = "geoJSON_map.rds")
 geoJSON_map <- readRDS("geoJSON_map.rds")
 View(geoJSON_map)
+
+# Interactive Map
+
