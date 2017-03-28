@@ -1,0 +1,21 @@
+---
+title: "Practice map"
+author: "Kate Sarfert"
+date: "3/28/2017"
+output: html_document
+---
+
+#Generic form
+```{r}
+View(geoJSON_map)
+library(leaflet)
+
+bins_columnname <- seq(lowest value in column, highest value in the column, number of bins you want)
+pal  <- colorBin("YlOrRd", map@data$columnname, bins_columnname)
+
+leaflet(data = geoJSON_map) %>%
+  addTiles()        %>%
+  addPolygons(fillColor = ~pal(columnname))
+
+```
+
