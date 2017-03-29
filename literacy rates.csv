@@ -1,0 +1,368 @@
+Country,Gender,literacy_rate
+Afghanistan,Males,-
+Afghanistan,Females,-
+Albania,Males,99%
+Albania,Females,100%
+Algeria,Males,94%
+Algeria,Females,89%
+Angola,Males,81%
+Angola,Females,65%
+Argentina,Females,99%
+Argentina,Males,99%
+Armenia,Females,100%
+Armenia,Males,100%
+Australia,Females,-
+Australia,Males,-
+Austria,Females,-
+Austria,Males,-
+Azerbaijan,Females,100%
+Azerbaijan,Males,100%
+Bahamas,Males,-
+Bahamas,Females,-
+Bahrain,Females,100%
+Bahrain,Males,100%
+Bangladesh,Males,73%
+Bangladesh,Females,76%
+Belarus,Males,100%
+Belarus,Females,100%
+Belgium,Females,-
+Belgium,Males,-
+Belize,Males,-
+Belize,Females,-
+Benin,Males,64%
+Benin,Females,42%
+Bhutan,Males,80%
+Bhutan,Females,68%
+Bolivia,Females,99%
+Bolivia,Males,100%
+Bosnia-Herzegovina,Males,100%
+Bosnia-Herzegovina,Females,99%
+Botswana,Females,96%
+Botswana,Males,94%
+Brazil,Males,97%
+Brazil,Females,99%
+Brunei,Males,100%
+Brunei,Females,100%
+Bulgaria,Males,97%
+Bulgaria,Females,97%
+Burkina Faso,Males,47%
+Burkina Faso,Females,33%
+Burundi,Females,75%
+Burundi,Males,77%
+Cambodia,Females,86%
+Cambodia,Males,89%
+Cameroon,Females,84%
+Cameroon,Males,88%
+Canada,Males,-
+Canada,Females,-
+Cape Verde,Males,97%
+Cape Verde,Females,99%
+Central African Republic,Males,72%
+Central African Republic,Females,56%
+Chad,Females,37%
+Chad,Males,54%
+Chile,Females,99%
+Chile,Males,99%
+China,Males,99%
+China,Females,99%
+Colombia,Females,98%
+Colombia,Males,98%
+Comoros,Females,84%
+Comoros,Males,86%
+Congo,Males,87%
+Congo,Females,78%
+"Congo, Dem. Rep. of",Females,62%
+"Congo, Dem. Rep. of",Males,69%
+Costa Rica,Females,99%
+Costa Rica,Males,98%
+Cote d'Ivoire,Females,60%
+Cote d'Ivoire,Males,72%
+Croatia,Males,100%
+Croatia,Females,100%
+Cuba,Males,100%
+Cuba,Females,100%
+Cyprus,Females,100%
+Cyprus,Males,100%
+Czech Republic,Males,-
+Czech Republic,Females,-
+Denmark,Females,-
+Denmark,Males,-
+Djibouti,Females,-
+Djibouti,Males,-
+Dominican Republic,Females,97%
+Dominican Republic,Males,95%
+Ecuador,Females,96%
+Ecuador,Males,95%
+Egypt,Females,82%
+Egypt,Males,88%
+El Salvador,Females,97%
+El Salvador,Males,95%
+Equatorial Guinea,Males,98%
+Equatorial Guinea,Females,98%
+Eritrea,Males,91%
+Eritrea,Females,84%
+Estonia,Males,100%
+Estonia,Females,100%
+Ethiopia,Males,62%
+Ethiopia,Females,39%
+Federated States of Micronesia,Males,-
+Federated States of Micronesia,Females,-
+Fiji,Males,-
+Fiji,Females,-
+Finland,Females,-
+Finland,Males,-
+France,Females,-
+France,Males,-
+French Polynesia,Females,-
+French Polynesia,Males,-
+Gabon,Females,96%
+Gabon,Males,98%
+Gambia,Females,58%
+Gambia,Males,70%
+Georgia,Females,100%
+Georgia,Males,100%
+Germany,Males,-
+Germany,Females,-
+Ghana,Males,81%
+Ghana,Females,78%
+Greece,Males,99%
+Greece,Females,99%
+Guam,Females,-
+Guam,Males,-
+Guatemala,Females,84%
+Guatemala,Males,89%
+Guinea,Females,51%
+Guinea,Males,67%
+Guinea-Bissau,Males,78%
+Guinea-Bissau,Females,62%
+Guyana,Females,-
+Guyana,Males,-
+Haiti,Females,-
+Haiti,Males,-
+Honduras,Females,95%
+Honduras,Males,93%
+"Hong Kong, SAR",Males,-
+"Hong Kong, SAR",Females,-
+Hungary,Females,99%
+Hungary,Males,98%
+Iceland,Males,-
+Iceland,Females,-
+India,Females,74%
+India,Males,88%
+Indonesia,Males,97%
+Indonesia,Females,96%
+Iran,Males,97%
+Iran,Females,96%
+Iraq,Females,80%
+Iraq,Males,85%
+Ireland,Males,-
+Ireland,Females,-
+Israel,Females,-
+Israel,Males,-
+Italy,Females,100%
+Italy,Males,100%
+Jamaica,Females,98%
+Jamaica,Males,92%
+Japan,Males,-
+Japan,Females,-
+Jordan,Females,99%
+Jordan,Males,99%
+Kazakhstan,Females,100%
+Kazakhstan,Males,100%
+Kenya,Females,93%
+Kenya,Males,92%
+"Korea, North",Females,100%
+"Korea, North",Males,100%
+"Korea, South",Males,-
+"Korea, South",Females,-
+Kuwait,Males,98%
+Kuwait,Females,99%
+Kyrgyzstan,Females,100%
+Kyrgyzstan,Males,100%
+Laos,Females,79%
+Laos,Males,89%
+Latvia,Males,100%
+Latvia,Females,100%
+Lebanon,Females,99%
+Lebanon,Males,98%
+Lesotho,Males,86%
+Lesotho,Females,98%
+Liberia,Females,80%
+Liberia,Males,70%
+Libya,Males,100%
+Libya,Females,100%
+Lithuania,Females,100%
+Lithuania,Males,100%
+Luxembourg,Males,-
+Luxembourg,Females,-
+Macedonia,Females,99%
+Macedonia,Males,99%
+Madagascar,Females,68%
+Madagascar,Males,73%
+Malawi,Females,85%
+Malawi,Males,87%
+Malaysia,Males,98%
+Malaysia,Females,99%
+Maldives,Females,99%
+Maldives,Males,99%
+Mali,Females,31%
+Mali,Males,47%
+Malta,Males,98%
+Malta,Females,99%
+Mauritania,Females,63%
+Mauritania,Males,71%
+Mauritius,Males,95%
+Mauritius,Females,97%
+Mexico,Females,98%
+Mexico,Males,98%
+Moldova,Males,99%
+Moldova,Females,100%
+Mongolia,Males,93%
+Mongolia,Females,97%
+Montenegro,Males,-
+Montenegro,Females,-
+Morocco,Females,68%
+Morocco,Males,85%
+Mozambique,Females,62%
+Mozambique,Males,78%
+Myanmar,Males,96%
+Myanmar,Females,95%
+Namibia,Males,91%
+Namibia,Females,95%
+Nepal,Males,86%
+Nepal,Females,75%
+Netherlands,Males,-
+Netherlands,Females,-
+New Caledonia,Males,-
+New Caledonia,Females,-
+New Zealand,Males,-
+New Zealand,Females,-
+Nicaragua,Males,85%
+Nicaragua,Females,89%
+Niger,Males,52%
+Niger,Females,23%
+Nigeria,Females,65%
+Nigeria,Males,78%
+Norway,Females,-
+Norway,Males,-
+Oman,Males,98%
+Oman,Females,98%
+Pakistan,Males,79%
+Pakistan,Females,59%
+Palestinian Territory,Males,99%
+Palestinian Territory,Females,99%
+Panama,Females,96%
+Panama,Males,97%
+Papua New Guinea,Females,69%
+Papua New Guinea,Males,65%
+Paraguay,Females,99%
+Paraguay,Males,99%
+Peru,Males,98%
+Peru,Females,97%
+Philippines,Females,96%
+Philippines,Males,94%
+Poland,Males,100%
+Poland,Females,100%
+Portugal,Females,100%
+Portugal,Males,100%
+Puerto Rico,Males,86%
+Puerto Rico,Females,85%
+Qatar,Females,99%
+Qatar,Males,99%
+Reunion,Females,-
+Reunion,Males,-
+Romania,Females,98%
+Romania,Males,97%
+Russia,Males,100%
+Russia,Females,100%
+Rwanda,Females,77%
+Rwanda,Males,77%
+Samoa,Females,100%
+Samoa,Males,99%
+Sao Tome and Principe,Males,95%
+Sao Tome and Principe,Females,96%
+Saudi Arabia,Females,96%
+Saudi Arabia,Males,98%
+Senegal,Females,45%
+Senegal,Males,58%
+Serbia,Females,99%
+Serbia,Males,99%
+Sierra Leone,Females,46%
+Sierra Leone,Males,66%
+Singapore,Males,100%
+Singapore,Females,100%
+Slovakia,Males,-
+Slovakia,Females,-
+Slovenia,Females,100%
+Slovenia,Males,100%
+Solomon Islands,Females,80%
+Solomon Islands,Males,90%
+Somalia,Females,-
+Somalia,Males,-
+South Africa,Males,96%
+South Africa,Females,98%
+Spain,Males,100%
+Spain,Females,100%
+Sri Lanka,Females,99%
+Sri Lanka,Males,97%
+Sudan,Females,82%
+Sudan,Males,89%
+Suriname,Males,96%
+Suriname,Females,95%
+Swaziland,Females,95%
+Swaziland,Males,92%
+Sweden,Females,-
+Sweden,Males,-
+Switzerland,Females,-
+Switzerland,Males,-
+Syria,Males,96%
+Syria,Females,93%
+Tajikistan,Females,100%
+Tajikistan,Males,100%
+Tanzania,Females,76%
+Tanzania,Males,79%
+Thailand,Males,98%
+Thailand,Females,98%
+Timor-Leste,Females,-
+Timor-Leste,Males,-
+Togo,Females,80%
+Togo,Males,87%
+Tonga,Males,99%
+Tonga,Females,100%
+Trinidad and Tobago,Males,100%
+Trinidad and Tobago,Females,100%
+Tunisia,Females,96%
+Tunisia,Males,98%
+Turkey,Males,99%
+Turkey,Females,94%
+Turkmenistan,Males,100%
+Turkmenistan,Females,100%
+Uganda,Males,89%
+Uganda,Females,86%
+Ukraine,Males,100%
+Ukraine,Females,100%
+United Arab Emirates,Females,97%
+United Arab Emirates,Males,94%
+United Kingdom,Males,-
+United Kingdom,Females,-
+United States,Females,-
+United States,Males,-
+Uruguay,Females,99%
+Uruguay,Males,99%
+Uzbekistan,Females,100%
+Uzbekistan,Males,100%
+Vanuatu,Males,94%
+Vanuatu,Females,94%
+Venezuela,Females,99%
+Venezuela,Males,98%
+Vietnam,Females,96%
+Vietnam,Males,97%
+Yemen,Females,70%
+Yemen,Males,95%
+Zambia,Males,82%
+Zambia,Females,68%
+Zimbabwe,Males,98%
+Zimbabwe,Females,99%
+,,
+Footnotes,,
+1,,
