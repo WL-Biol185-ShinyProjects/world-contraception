@@ -288,6 +288,8 @@ leaflet(data = geoJSON_map) %>%
   addPolygons(fillColor = ~pal(all_contraception_methods),
               weight = 2,
               opacity = 1,
+              color = "white",
+              dashArray = "3",
               fillOpacity = 0.7)
 
 
