@@ -278,4 +278,16 @@ geoJSON_map <- readRDS("geoJSON_map.rds")
 View(geoJSON_map)
 
 # Interactive Map
+library(leaflet)
+
+bins_all_methods <- seq(0, 1, length = 10)
+pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins_all_methods)
+
+leaflet(data = geoJSON_map) %>%
+  addTiles()        %>%
+  addPolygons(fillColor = ~pal(all_contraception_methods),
+              weight = 2,
+              opacity = 1,
+              fillOpacity = 0.7)
+
 
