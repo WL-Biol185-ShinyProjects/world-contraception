@@ -321,6 +321,6 @@ m_labels <- m %>% addPolygons(
   label = labels,
   labelOptions = labelOptions(
     style = list("font-weight" = "normal", padding = "3px 8px"),
-    textsize = "15px",
+    textsize = "10px",
     direction = "auto"))
 m_labels
