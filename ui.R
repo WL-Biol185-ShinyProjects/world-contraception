@@ -13,5 +13,3 @@ fluidPage(
   mainPanel(leafletOutput('shinymap'),
           plotOutput(outputId = "shinymap")))
 
-shinyApp(ui = "ui.R", server = "server.R")
-

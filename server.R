@@ -1,9 +1,11 @@
 function(input, output) {
   
-  output$shinymap <- leaflet(data = geoJSON_map) %>%
+  output$shinymap <- renderLeaflet({
+    
+  leaflet(data = geoJSON_map) %>%
     addTiles()        %>%
     
-    if (input$"Proportion of married women using any method of contraception") {
+    if (input$variable1 == "Proportion of married women using any method of contraception") {
     addPolygons(fillColor = ~pal(all_contraception_methods),
                 weight = 2,
                 opacity = 1,
@@ -37,7 +39,7 @@ function(input, output) {
                     bringToFront = TRUE))
   }
   output$shinymap <- renderLeaflet(shinymap)
-  }
+ ) }
 
 
 
