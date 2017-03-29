@@ -1,0 +1,28 @@
+---
+title: "Correlations_panel"
+author: "Kate Sarfert"
+date: "3/29/2017"
+output: html_document
+---
+
+```{r}
+#ui
+fluidPage(
+  inputPanel(
+  selectInput("variable1", 
+              label = "Development Variable 1", 
+              choices = c("Proportion of married women using any method of contraception", "Proportion of married women using modern methods of contraception", "Birth rate", "Death rate", "Infant mortality rate", "Maternal deaths", "Adolescent fertility rate", "Fertility rate", "Male life expectancy", "Female life expectancy", "Male literacy rate", "Female literacy rate", "GDP", "Work force ratio, women to men", "Proportion of men in the labor force", "Proportion of women in the labor force", "Proportion of men who participate in the economy", "Proportion of women who participate in the economy"),)
+  selectInput("variable2",
+              label = "Development Variable 2",
+              choices = c("Proportion of married women using any method of contraception", "Proportion of married women using modern methods of contraception", "Birth rate", "Death rate", "Infant mortality rate", "Maternal deaths", "Adolescent fertility rate", "Fertility rate", "Male life expectancy", "Female life expectancy", "Male literacy rate", "Female literacy rate", "GDP", "Work force ratio, women to men", "Proportion of men in the labor force", "Proportion of women in the labor force", "Proportion of men who participate in the economy", "Proportion of women who participate in the economy"),
+)
+
+#server
+function(input, output) {
+  output$data <- renderPlot({
+    geoJSON_map %>%
+      ggplot(aes(input$variable1, input$variable2))
+  })
+}
+```
+
