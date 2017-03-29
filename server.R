@@ -1,3 +1,45 @@
+function(input, output) {
+  
+  output$shinymap <- leaflet(data = geoJSON_map) %>%
+    addTiles()        %>%
+    
+    if (input$"Proportion of married women using any method of contraception") {
+    addPolygons(fillColor = ~pal(all_contraception_methods),
+                weight = 2,
+                opacity = 1,
+                color = "white",
+                dashArray = "3",
+                fillOpacity = 0.7,
+                highlight = highlightOptions(
+                  weight = 5,
+                  color = "#666",
+                  dashArray = "",
+                  fillOpacity = 0.7,
+                  bringToFront = TRUE,
+                  label = labels,
+                  labelOptions = labelOptions(
+                    style = list("font-weight" = "normal", padding = "3px 8px"),
+                    textsize = "10px",
+                    direction = "auto")))
+}
+  if (input$"Proportion of married women using modern methods of contraception") {
+      addPolygons(fillColor = ~pal(modern_methods),
+                  weight = 2,
+                  opacity = 1,
+                  color = "white",
+                  dashArray = "3",
+                  fillOpacity = 0.7,
+                  highlight = highlightOptions(
+                    weight = 5,
+                    color = "#666",
+                    dashArray = "",
+                    fillOpacity = 0.7,
+                    bringToFront = TRUE))
+  }}
+
+
+
+
 library(shiny)
 library(tidyverse)
 library(dplyr)
@@ -54,7 +96,3 @@ m_labels <- m %>% addPolygons(
     direction = "auto"))
 m_labels
 
-function(input, output) {
-  output$value <- renderPrint(({ input$contraception_data}))
-}
-  

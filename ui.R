@@ -1,10 +1,10 @@
 library(shiny)
 library(leaflet)
-fluidPage(selectInput(inputId = "contraception_data",
-                      label = "Proportion of couples using ____ method(s) of contraception",
-                      choices = list("Choice 1" = "Any", "Choice 2" = "Modern"),
-                      selected = 1),
-          plotOutput(outputId = "Map"))
+fluidPage(selectInput(inputId = "data",
+                      label = "Contraception and Development Indicators",
+                      choices = c("Proportion of married women using any method of contraception", "Proportion of married women using modern methods of contraception", "Birth rate", "Death rate", "Infant mortality rate", "Maternal deaths", "Adolescent fertility rate", "Fertility rate", "Male life expectancy", "Female life expectancy", "Male literacy rate", "Female literacy rate", "GDP", "Work force ratio, women to men", "Proportion of men in the labor force", "Proportion of women in the labor force", "Proportion of men who participate in the economy", "Proportion of women who participate in the economy"),
+                      selected = "Proportion of married women using any method of contraception"),
+          plotOutput(outputId = "shinymap"))
 
 shinyApp(ui = "ui.R", server = "server.R")
 
