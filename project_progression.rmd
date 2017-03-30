@@ -279,6 +279,10 @@ library(leaflet)
 
 bins_all_methods <- seq(0, 1, length = 10)
 pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins_all_methods)
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g proportion of married couples who use any contraception",
+  geoJSON_map$name, geoJSON_map$all_contraception_methods
+) %>% lapply(htmltools::HTML)
 
 leaflet(data = geoJSON_map) %>%
   addTiles()        %>%
@@ -293,7 +297,12 @@ leaflet(data = geoJSON_map) %>%
                 color = "#666",
                 dashArray = "",
                 fillOpacity = 0.7,
-                bringToFront = TRUE))
+                bringToFront = TRUE),
+                 label = labels,
+  labelOptions = labelOptions(
+    style = list("font-weight" = "normal", padding = "3px 8px"),
+    textsize = "10px",
+    direction = "auto"))
 
 # unfinished labels section
 
@@ -325,4 +334,29 @@ m_labels
 function(input, output) {
   output$value <- renderPrint(({ input$contraception_data}))
 }
+
+#Practice selectinput
+
+ sidebarPanel(
+                  selectInput(inputId = "variable1",
+                      label = "Contraception and Development Indicators",
+                      choices = list(all_contraception_methods == "Proportion of married women using any method of contraception",
+                                     modern_contraception_methods == "Proportion of married women using modern methods of contraception",
+                                     birth_rate == "Birth rate",
+                                     death_rate == "Death rate",
+                                     infant_mortality_rate == "Infant mortality rate",
+                                     maternal_deaths == "Maternal deaths",
+                                     adolescent_fertility_rate == "Adolescent fertility rate",
+                                     fertility_rate == "Fertility rate",
+                                     male_life_expectancy == "Male life expectancy",
+                                     female_life_expectancy == "Female life expectancy",
+                                     male_lit_rate == "Male literacy rate",
+                                     female_lit_rate == "Female literacy rate",
+                                     gdp == "GDP",
+                                     work_force_ratio == "Work force ratio, women to men",
+                                     male_labor_force_participation == "Proportion of men in the labor force",
+                                     female_labor_force_participation == "Proportion of women in the labor force",
+                                     male_econ_activity == "Proportion of men who participate in the economy",
+                                     female_econ_activity == "Proportion of women who participate in the economy"),
+                      selected = "Proportion of married women using any method of contraception"))
   
