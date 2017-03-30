@@ -5,7 +5,7 @@ date: "3/29/2017"
 output: html_document
 ---
 
-sinymap <- leaflet(data = geoJSON_map) %>%
+shinymap <- leaflet(data = geoJSON_map) %>%
   addTiles()        %>%
   addPolygons(fillColor = ~pal(all_contraception_methods),
               weight = 2,
