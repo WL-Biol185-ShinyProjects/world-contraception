@@ -33,7 +33,7 @@ function(input, output) {
                     direction = "auto")) %>%
       addLegend(pal = pal, values = ~density, opacity = 0.7, title = "Proportion of Married Women Using Birth Control" ,
                 position = "bottomright")
-    m_labels
+
     
   })
 }
