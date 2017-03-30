@@ -1,19 +1,22 @@
-bins_all_methods <- seq(0, 1, length = 10)
-pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins_all_methods)
-labels <- sprintf(
-  "<strong>%s</strong><br/>%g proportion of married women who use any form of contraception",
-  geoJSON_map$name, geoJSON_map$all_contraception_methods
-) %>% lapply(htmltools::HTML)
-country_popup <-  sprintf(
-  "<strong>%s</strong><br/>%g proportion of married women who use any form of contraception",
-  geoJSON_map$name, geoJSON_map$all_contraception_methods
-) %>% lapply(htmltools::HTML)
+library(dplyr)
+
+
 
 function(input, output) {
   output$shinymap <- renderLeaflet({
+    pal  <- colorBin("YlOrRd", geoJSON_map@data[[input$variable1]])
+    labels <- sprintf(
+      "<strong>%s</strong><br/>%g proportion of married women who use any form of contraception",
+      geoJSON_map$name, geoJSON_map$all_contraception_methods
+    ) %>% lapply(htmltools::HTML)
+    country_popup <-  sprintf(
+      "<strong>%s</strong><br/>%g proportion of married women who use any form of contraception",
+      geoJSON_map$name, geoJSON_map$all_contraception_methods
+    ) %>% lapply(htmltools::HTML)
+    geoJSON_map@data <-  mutate_(geoJSON_map@data, value = input$variable1)
       leaflet(data = geoJSON_map) %>%
       addTiles()        %>%
-      addPolygons(fillColor = ~pal(all_contraception_methods),
+      addPolygons(fillColor = ~pal(value),
                   weight = 2,
                   opacity = 1,
                   color = "white",
