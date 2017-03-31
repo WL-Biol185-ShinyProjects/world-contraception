@@ -33,7 +33,7 @@ function(input, output) {
                     direction = "auto")) %>%
       addLegend(pal = pal, values = ~density, opacity = 0.7, title = input$variable1,
                 position = "bottomright") %>%
-      setView(map, lng = 0, lat = 0, zoom = 1)
+      setView(map, lng = 65, lat = 40, zoom = 1.1)
 
     
   })
