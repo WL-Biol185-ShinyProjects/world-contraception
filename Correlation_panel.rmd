@@ -26,3 +26,9 @@ function(input, output) {
 }
 ```
 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
