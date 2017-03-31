@@ -32,7 +32,8 @@ function(input, output) {
                     textsize = "10px",
                     direction = "auto")) %>%
       addLegend(pal = pal, values = ~density, opacity = 0.7, title = input$variable1,
-                position = "bottomright")
+                position = "bottomright") %>%
+      setView(map, lng = 0, lat = 0, zoom = 1)
 
     
   })
