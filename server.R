@@ -12,7 +12,7 @@ country_popup <-  sprintf(
 function(input, output) {
   output$shinymap <- renderLeaflet({
       leaflet(data = geoJSON_map) %>%
-      addTiles()        %>%
+      addTiles(options = tileOptions(noWrap = TRUE))        %>%
       addPolygons(fillColor = ~pal(all_contraception_methods),
                   weight = 2,
                   opacity = 1,
