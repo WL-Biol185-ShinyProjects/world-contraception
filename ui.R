@@ -6,7 +6,7 @@ fluidPage(
                 position = "left",
                 sidebarPanel = sidebarPanel(
                   selectInput(inputId = "variable1",
-                              label = "Contraception and Development Indicators",
+                              label = "Select contraception and country development indicators to map:",
                               choices = list('Proportion of married women who use any method of contraception' = "all_contraception_methods",
                                              'Proportion of married women using modern methods of contraception' = "modern_contraception_methods",
                                              'Birth rate' = "birth_rate",
