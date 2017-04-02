@@ -1,9 +1,13 @@
 bins_all_methods <- seq(0, 1, length = 10)
 pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins_all_methods)
+
+#Country highlight labels
 labels <- sprintf(
   "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong>",
   geoJSON_map$name, geoJSON_map$all_contraception_methods
 ) %>% lapply(htmltools::HTML)
+
+#Country popup click labels
 country_popup <-  sprintf(
   "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong><br/> Proportion of married women who use modern forms of contraception: <strong>%g</strong>",
   geoJSON_map$name, geoJSON_map$all_contraception_methods, geoJSON_map$modern_contraception_methods
