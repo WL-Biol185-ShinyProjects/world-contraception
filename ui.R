@@ -7,7 +7,9 @@ fluidPage(
       tabPanel("Background"),
       tabPanel("Data",
                sidebarLayout( 
-               sidebarPanel(selectInput(inputId = "variable1",
+               sidebarPanel(position = "above",
+                            width = 12,
+                            selectInput(inputId = "variable1",
                            label = "Select contraception use or country development indicators to map:",
                            choices = list('Proportion of married women who use any method of contraception' = "all_contraception_methods",
                                           'Proportion of married women using modern methods of contraception' = "modern_contraception_methods",
@@ -28,12 +30,13 @@ fluidPage(
                                           'Proportion of men who participate in the economy' = "male_econ_activity",
                                           'Proportion of women who participate in the economy' = "female_econ_activity"),
                            selected = "Proportion of married women using any method of contraception")),
-                mainPanel(
+                mainPanel(position = "below",
                           tabsetPanel(
                                 tabPanel("Map", leafletOutput("shinymap"), position = "below"),
                                 tabPanel("Bar Plots"),
                                 tabPanel("Correlations"),
-                                position = "right"))),
+                                position = "right"),
+                          width = "100%")),
       tabPanel("Sources"))
     )
   )
