@@ -32,10 +32,4 @@ fluidPage(
               tabPanel("Correlations"))
   )
   
-              
-               
-
-              
-
-
 

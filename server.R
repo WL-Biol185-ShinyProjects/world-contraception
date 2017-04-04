@@ -8,7 +8,10 @@ library(dplyr)
 
 
 function(input, output) {
+  geoJSON_map <- readRDS(file = "geoJSON_map.rds")
+  map <- readRDS(file = "map.rds")
   output$shinymap <- renderLeaflet({
+    
     pal  <- colorBin("YlOrRd", geoJSON_map@data[[input$variable1]])
     
     labels <- sprintf(
