@@ -12,8 +12,8 @@ function(input, output) {
     pal  <- colorBin("YlOrRd", geoJSON_map@data[[input$variable1]])
     
     labels <- sprintf(
-      "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong>",
-      geoJSON_map$name, geoJSON_map$all_contraception_methods
+      "<strong>%s</strong><br/> Value: <strong>%g</strong>",
+      geoJSON_map$name, geoJSON_map@data[[input$variable1]]
     ) %>% lapply(htmltools::HTML)
     
     country_popup <-  sprintf(
