@@ -1,0 +1,21 @@
+---
+title: "plot drafts"
+author: "Jake Roberts"
+date: "April 3, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+ggplot(aes(geoJSON_map$name, geoJSON_map$all_contraception_methods)) + geom_bar()
+geoJSON_map %>%
+  group_by(name) %>%
+  summarize(n         = n(),
+            ave_delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(n, ave_delay, color = origin)) + geom_point()
+```
+
