@@ -32,15 +32,15 @@ fluidPage(
                            selected = "Proportion of married women using any method of contraception")),
                 mainPanel(position = "below",
                           tabsetPanel(
-                                tabPanel("Map", leafletOutput("shinymap"), position = "below"),
+                                tabPanel("Map", leafletOutput("shinymap", height = 500, width = 1250), position = "below"),
                                 tabPanel("Bar Plots"),
                                 tabPanel("Correlations"),
                                 position = "right"),
-                          width = "100%")),
+                          width = "100%"))),
       tabPanel("Sources"))
     )
   )
-)
+
     
   
 
