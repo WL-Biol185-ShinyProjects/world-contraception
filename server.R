@@ -49,4 +49,8 @@ function(input, output) {
 
     
   })
+  output$correlations <- renderPlot({
+    geoJSON_map@data[[input$variable1]] 
+    ggplot(aes(value, selectInput(variable2)))
+  })
 }
