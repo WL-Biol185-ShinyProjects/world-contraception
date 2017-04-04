@@ -56,7 +56,7 @@ function(input, output) {
   output$barplot <- renderPlot({
     geoJSON_map@data %>% 
       filter(name %in% geoJSON_map$name) %>%
-    ggplot(aes(name, input$variable1)) + 
+    ggplot(aes(name, geoJSON_map@data[[input$variable1]])) + 
       geom_bar(stat = "identity", alpha = 0.8) + 
       theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
   })
