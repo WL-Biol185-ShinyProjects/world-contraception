@@ -1,23 +1,31 @@
 bins_all_methods <- seq(0, 1, length = 10)
-pal  <- colorBin("YlOrRd", map@data$all_contraception_methods, bins_all_methods)
+library(dplyr)
 
 #Country highlight labels
-labels <- sprintf(
-  "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong>",
-  geoJSON_map$name, geoJSON_map$all_contraception_methods
-) %>% lapply(htmltools::HTML)
+
 
 #Country popup clickable labels
-country_popup <-  sprintf(
-  "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong><br/> Proportion of married women who use modern forms of contraception: <strong>%g</strong>",
-  geoJSON_map$name, geoJSON_map$all_contraception_methods, geoJSON_map$modern_contraception_methods
-) %>% lapply(htmltools::HTML)
+
 
 function(input, output) {
   output$shinymap <- renderLeaflet({
+    pal  <- colorBin("YlOrRd", geoJSON_map@data[[input$variable1]])
+    
+    labels <- sprintf(
+      "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong>",
+      geoJSON_map$name, geoJSON_map$all_contraception_methods
+    ) %>% lapply(htmltools::HTML)
+    
+    country_popup <-  sprintf(
+      "<strong>%s</strong><br/> Proportion of married women who use any form of contraception: <strong>%g</strong><br/> Proportion of married women who use modern forms of contraception: <strong>%g</strong>",
+      geoJSON_map$name, geoJSON_map$all_contraception_methods, geoJSON_map$modern_contraception_methods
+    ) %>% lapply(htmltools::HTML)
+    
+    geoJSON_map@data <- mutate_(geoJSON_map@data, value = input$variable1)
+    
       leaflet(data = geoJSON_map) %>%
       addTiles(options = tileOptions(noWrap = TRUE))        %>%
-      addPolygons(fillColor = ~pal(all_contraception_methods),
+      addPolygons(fillColor = ~pal(value),
                   weight = 2,
                   opacity = 1,
                   color = "white",
