@@ -52,6 +52,13 @@ function(input, output) {
 
     
   })
+  output$barplot <- renderPlot({
+    geoJSON_map@data %>% 
+    ggplot(aes(name, input$variable1)) + 
+      geom_bar(stat = "identity", alpha = 0.8) + 
+      theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
+  })
+  
   output$correlations <- renderPlot({
     geoJSON_map@data[[input$variable1]] 
     ggplot(aes(value, selectInput(variable2)))

@@ -33,7 +33,7 @@ fluidPage(
                 mainPanel(position = "below",
                           tabsetPanel(
                                 tabPanel("Map", leafletOutput("shinymap", height = 500, width = 1000), position = "below"),
-                                tabPanel("Bar Plots"),
+                                tabPanel("Bar Plots", plotOutput("barplot", height = 400, width = 2500), position = "below"),
                                 tabPanel("Correlations"),
                                 position = "right"),
                           width = "100%"))),
