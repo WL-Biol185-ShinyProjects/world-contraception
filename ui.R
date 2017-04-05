@@ -15,10 +15,12 @@ dashboardPage(
     tabItems(
       tabItem(tabName = "home",
               fluidPage(
+                theme = shinytheme("flatly"),
                 titlePanel("World Contraception Use and Indicators of Development"),
                 mainPanel("Here is where we state our project"))),
       tabItem(tabName = "background",
               fluidPage(
+                theme = shinytheme("flatly"),
                 titlePanel("Background"),
                 h4("This is where we explain what we are doing, why, and how it will help society"))),
       tabItem(tabName = "data",
@@ -55,6 +57,7 @@ dashboardPage(
                           width = "100%"))),
       tabItem(tabName = "sources",
               fluidPage(
+                theme = shinytheme("flatly"),
                 titlePanel("Data Source")))
     )
   )
