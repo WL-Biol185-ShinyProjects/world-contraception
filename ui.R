@@ -1,7 +1,9 @@
 library(shiny)
 library(leaflet)
+library(shinythemes)
 
 fluidPage(
+  theme = shinytheme("flatly"),
   navbarPage("World Contraception Use and Indicators of Development"
            , position = "static-top"
            , fluid = TRUE

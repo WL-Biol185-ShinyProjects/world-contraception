@@ -1,6 +1,7 @@
 bins_all_methods <- seq(0, 1, length = 10)
 library(dplyr)
 library(ggplot2)
+library(shinythemes)
 
 #Country highlight labels
 
