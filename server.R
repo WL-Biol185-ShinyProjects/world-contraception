@@ -63,7 +63,9 @@ function(input, output) {
   })
   
   output$correlations <- renderPlot({
-    geoJSON_map@data[[input$variable1]] 
-    ggplot(aes(value, selectInput(variable2)))
+    geoJSON_map@data %>%
+      filter(name %in% geoJSON_map$name) %>%
+      ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]])) + geom_point()
+
   })
 }
