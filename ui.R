@@ -57,7 +57,9 @@ dashboardPage(
                                      sidebarLayout(
                                        sidebarPanel(position = "left",
                                                     width = 8,
-                                                    selectizeInput(inputId = "selectize", label = 'Select countries to plot:', choices = geoJSON_map@data$name, multiple = TRUE)),
+                                                    selectizeInput(inputId = "selectize", 
+                                                                   label = 'Select countries to plot:', 
+                                                                   choices = geoJSON_map@data$name, multiple = TRUE)),
                                      mainPanel(position = "right", plotOutput("barplot", height = 400, width = 2500)))),
                             tabPanel("Correlations", 
                                      sidebarLayout( 
