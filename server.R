@@ -71,7 +71,7 @@ function(input, output) {
       ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]])) + xlab(input$variable1) + ylab(input$variable2)
 
     if (input$colorBy==TRUE) {
-      p <- p + geom_point(aes(color = geoJSON_map@data$gdp))
+      p <- p + geom_point(aes(color = geoJSON_map@data$gdp)) + labs(color = 'GDP')
     } else {
       p <- p + geom_point()
     }
