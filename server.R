@@ -68,7 +68,7 @@ function(input, output) {
   output$correlations <- renderPlot({
     p <- geoJSON_map@data %>%
       filter(name %in% geoJSON_map$name) %>%
-      ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]]))
+      ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]])) + xlab(input$variable1) + ylab(input$variable2)
 
     if (input$colorBy==TRUE) {
       p <- p + geom_point(aes(color = geoJSON_map@data$gdp))

@@ -2,6 +2,8 @@ library(shiny)
 library(leaflet)
 library(shinythemes)
 library(shinydashboard)
+geoJSON_map <- readRDS(file = "geoJSON_map.rds")
+map <- readRDS(file = "map.rds")
 
 dashboardPage(
   dashboardHeader(title = "World Contraception Use and Indicators of Development"),
