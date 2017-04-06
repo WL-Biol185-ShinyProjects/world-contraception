@@ -57,11 +57,18 @@ function(input, output) {
     
   })
   output$barplot <- renderPlot({
-    geoJSON_map@data %>% 
+    bp <- geoJSON_map@data %>% 
       filter(name %in% geoJSON_map$name) %>%
-      ggplot(aes(x = reorder(name, -geoJSON_map@data[[input$variable1]]), y = geoJSON_map@data[[input$variable1]], fill = geoJSON_map@data[[input$variable1]])) + 
-      geom_bar(stat = "identity", alpha = 0.8) + 
-      theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
+      ggplot(aes(x = reorder(name, -geoJSON_map@data[[input$variable1]]), y = geoJSON_map@data[[input$variable1]], fill = geoJSON_map@data[[input$variable1]]))
+    
+    if (is.null(input$selectize)){
+      bp <- bp + geom_bar(stat = "identity", alpha = 0.8) + 
+        theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
+    }  else {
+      bp <- bp + geom_bar(aes(x = reorder(input$selectize, -geoJSON_map@data[[input$variable1]], y = geoJSON_map@data[[input$variable1]], fill = geoJSON_map@data[[input$variable1]]), stat = "identity", alpha = 0.8)) + 
+        theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
+    }
+    
   })
   
  
