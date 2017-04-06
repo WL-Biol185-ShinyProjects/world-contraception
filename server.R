@@ -12,6 +12,8 @@ library(shinythemes)
 function(input, output) {
   geoJSON_map <- readRDS(file = "geoJSON_map.rds")
   map <- readRDS(file = "map.rds")
+  
+  
   output$shinymap <- renderLeaflet({
     
     pal  <- colorBin("YlOrRd", geoJSON_map@data[[input$variable1]])
@@ -62,10 +64,17 @@ function(input, output) {
       theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
   })
   
+ 
   output$correlations <- renderPlot({
-    geoJSON_map@data %>%
+    p <- geoJSON_map@data %>%
       filter(name %in% geoJSON_map$name) %>%
-      ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]])) + geom_point()
+      ggplot(aes(geoJSON_map@data[[input$variable1]], geoJSON_map@data[[input$variable2]]))
 
+    if (input$colorBy==TRUE) {
+      p <- p + geom_point(aes(color = geoJSON_map@data$gdp))
+    } else {
+      p <- p + geom_point()
+    }
+    p
   })
 }
