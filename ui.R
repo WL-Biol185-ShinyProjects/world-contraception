@@ -76,7 +76,12 @@ dashboardPage(
                                                                                'Proportion of women in the labor force' = "female_labor_force_participation",
                                                                                'Proportion of men who participate in the economy' = "male_econ_activity",
                                                                                'Proportion of women who participate in the economy' = "female_econ_activity"),
-                                                                selected = "Proportion of married women using any method of contraception")),
+                                                                selected = "Proportion of married women using any method of contraception"),
+                                                    radioButtons(inputId = "colorBy",
+                                                                 label = "Color by:",
+                                                                 choices = list('Country Name' = "name",
+                                                                                'GDP' = "gdp"),
+                                                                selected = "Country Name")),
                                        mainPanel(position = "right", plotOutput("correlations", height = 400, width = 950), position ="below"))))))),
       tabItem(tabName = "sources",
               fluidPage(
