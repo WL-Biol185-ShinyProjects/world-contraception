@@ -71,7 +71,7 @@ function(input, output) {
     } else {
       x <- geoJSON_map@data %>% 
         filter(name %in% geoJSON_map$name) %>%
-        ggplot(aes(x = input$selectize, y = geoJSON_map@data[[input$variable1]], fill = geoJSON_map@data[[input$variable1]])) +
+        ggplot(aes(x = "selectize", y = geoJSON_map@data[[input$variable1]], fill = geoJSON_map@data[[input$variable1]])) +
         geom_bar(stat = "identity", alpha = 0.8, width = 0.8) + 
         theme(axis.text.x = element_text(angle = 60, hjust = 1)) + theme(legend.position = "none")
     }
