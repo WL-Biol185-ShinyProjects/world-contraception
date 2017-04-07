@@ -97,6 +97,9 @@ dashboardPage(
                 titlePanel("Data Sources"),
                 
                 br(),
+                fluidRow(("Our data was obtained by compiling data sheets from the Population Reference Bureau."),
+                align = "left"),
+                
                 br(),
                 
                 helpText(a("Click here to download our data set", align = "center") 
