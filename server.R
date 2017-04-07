@@ -3,12 +3,6 @@ library(dplyr)
 library(ggplot2)
 library(shinythemes)
 
-#Country highlight labels
-
-
-#Country popup clickable labels
-
-
 function(input, output) {
   geoJSON_map <- readRDS(file = "geoJSON_map.rds")
   map <- readRDS(file = "map.rds")
