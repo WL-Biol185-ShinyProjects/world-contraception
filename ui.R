@@ -19,7 +19,21 @@ dashboardPage(
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("World Contraception Use and Indicators of Development"),
-                mainPanel("Here is where we state our project"))),
+                mainPanel("    Welcome to the World Contraception Use and Indicators of Development data app! This app is 
+                          designed to allow the exploration of the relationship between contraception 
+                          use by women throughout the world and indicators of country development. We utilize population 
+                          statistics made available by the Population Reference Bureau (PRB) to create an interactive
+                          visualization demonstrating how geographic location and the stage of developent in a country
+                          strongly influences women's use of contraception.", 
+                          br(),
+                          br(),
+                          "    Among our data visualizations located in the Data tab of the app, we include a map in which 
+                          different inputs can be selected in order to plot an illustration of contraception use and 
+                          developmental indicators by country. Next, we include a barplot illustrating the data visualized 
+                          in the map in graphical form. In order to determine how contraception use and country development
+                          are related to each other, we include a tab in which these variables can be selected on different
+                          axes so that correlations can be observed between these indicators."
+                          ))),
       tabItem(tabName = "background",
               fluidPage(
                 theme = shinytheme("flatly"),
