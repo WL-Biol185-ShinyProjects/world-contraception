@@ -50,7 +50,7 @@ dashboardPage(
                 sidebarPanel(position = "above",
                              width = 12,
                              selectInput(inputId = "variable1",
-                                         label = "Select contraception use or country development indicators to map:",
+                                         label = "Select contraception use or country development indicators to plot or map:",
                                          choices = list('Proportion of married women who use any method of contraception' = "all_contraception_methods",
                                                         'Proportion of married women who use modern methods of contraception' = "modern_contraception_methods",
                                                         'Birth rate (annual number of births per 1,000 total population)' = "birth_rate",
