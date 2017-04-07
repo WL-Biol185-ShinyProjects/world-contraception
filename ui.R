@@ -18,16 +18,16 @@ dashboardPage(
       tabItem(tabName = "home",
               fluidPage(
                 theme = shinytheme("flatly"),
-                titlePanel("World Contraception Use and Indicators of Development"),
-                mainPanel("    Welcome to the World Contraception Use and Indicators of Development data app! This app is 
-                          designed to allow the exploration of the relationship between contraception 
+                titlePanel("World Contraception Use and Indicators of Country Development"),
+                mainPanel("Welcome to the World Contraception Use and Indicators of Country Development data app! 
+                          This app is designed to allow the exploration of the relationship between contraception 
                           use by women throughout the world and indicators of country development. We utilize population 
                           statistics made available by the Population Reference Bureau (PRB) to create an interactive
                           visualization demonstrating how geographic location and the stage of developent in a country
                           strongly influences women's use of contraception.", 
                           br(),
                           br(),
-                          "    Among our data visualizations located in the Data tab of the app, we include a map in which 
+                          "Among our data visualizations located in the Data tab of the app, we include a map in which 
                           different inputs can be selected in order to plot an illustration of contraception use and 
                           developmental indicators by country. Next, we include a barplot illustrating the data visualized 
                           in the map in graphical form. In order to determine how contraception use and country development
@@ -38,7 +38,13 @@ dashboardPage(
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("Background"),
-                h4("This is where we explain what we are doing, why, and how it will help society"))),
+                h4("Contraception usage serves an indicator of the economic and social freedm of women.
+                   As a result, developing an understanding of the factors influencing the ability of 
+                   women to access and use different forms of contraception may help to identify areas 
+                   where interventions can increase women's freedom.",
+                   br(),
+                   br(),
+                   "Information about modern contraceptives vs. other forms of contraceptives."))),
       tabItem(tabName = "data",
               sidebarLayout( 
                 sidebarPanel(position = "above",
