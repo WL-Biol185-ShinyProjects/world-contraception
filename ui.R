@@ -94,7 +94,14 @@ dashboardPage(
       tabItem(tabName = "sources",
               fluidPage(
                 theme = shinytheme("flatly"),
-                titlePanel("Data Source")))
+                titlePanel("Data Sources"),
+                
+                br(),
+                br(),
+                
+                helpText(a("Click here to download our data set", align = "center") 
+                
+                )))
     )
   )
 )
