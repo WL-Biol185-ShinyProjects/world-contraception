@@ -5,6 +5,7 @@ library(shinydashboard)
 geoJSON_map <- readRDS(file = "geoJSON_map.rds")
 map <- readRDS(file = "map.rds")
 
+
 dashboardPage(
   dashboardHeader(title = "World Contraception Use and Indicators of Development"),
   dashboardSidebar(
@@ -19,7 +20,7 @@ dashboardPage(
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("World Contraception Use and Indicators of Country Development"),
-                mainPanel("Welcome to the World Contraception Use and Indicators of Country Development data app! 
+                h5("Welcome to the World Contraception Use and Indicators of Country Development data app! 
                           This app is designed to allow the exploration of the relationship between contraception 
                           use by women throughout the world and indicators of country development. We utilize population 
                           statistics made available by the Population Reference Bureau (PRB) to create an interactive
@@ -44,11 +45,25 @@ dashboardPage(
                    women to access and use different forms of contraception may help to identify areas 
                    where interventions can increase women's freedom.",
                    br(),
+                   br()),
+                h4("In many developing countries, couples use only traditional methods of contraception, such as rhythm and withdrawal, 
+                   which are less effective than modern methods available in developed countries."),
+                   h4(br(),
+                   img(src = "traditional_contraception_map.png",
+                       width = 600,
+                       height = 547.5,
+                       align = "center"),
                    br(),
-                   "Information about modern contraceptives vs. other forms of contraceptives.",
+                   br(),
+                   "Increasing the availability and education of birth control world-wide reduces the number of unintended pregnancies and abortions, 
+                   improves quality of life for women, and enhances country development",
                    br(),
                    br(),
+                   img(src = "contracep_unmetneed.png"),
                    br(),
+                   br(),
+                   
+                   
                    "See the following for more information regarding the relationship between contraception use, 
                    female empowerment, and country development:",
                    br(),
