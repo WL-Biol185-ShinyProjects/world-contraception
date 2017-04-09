@@ -27,6 +27,8 @@ dashboardPage(
                           visualization demonstrating how geographic location and the stage of developent in a country
                           strongly influences women's use of contraception.", 
                           br(),
+                          img(src = "globe.png",
+                              align = "center"),
                           br(),
                           "Among our data visualizations located in the Data tab of the app, we include a map in which 
                           different inputs can be selected in order to plot an illustration of contraception use and 
