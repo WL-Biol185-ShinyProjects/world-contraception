@@ -54,10 +54,18 @@ dashboardPage(
                    br(),
                    br()),
                 
-                   h5(helpText(a("- Women's Empowerment and Contraceptive Use: The Role of Independent versus Couples' Decision-Making, from a Lower Middle Income Country Perspective")),
-                      helpText(a("- Unmet Need for Contraception in Developing Countries: Examining Women’s Reasons for Not Using a Method")),
-                      helpText(a("- In The World’s Poorest Countries, Demand For Birth Control Is Increasing But Access To It Isn’t")),
-                      helpText(a("- Women's Empowerment and Family Planning: A Review of the Literature")))
+                   h5(helpText(a("- Women's Empowerment and Contraceptive Use: The Role of Independent versus Couples' Decision-Making, from a Lower Middle Income Country Perspective",
+                                href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0104633",
+                                target="_blank")),
+                      helpText(a("- Unmet Need for Contraception in Developing Countries: Examining Women’s Reasons for Not Using a Method",
+                                 href="https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries",
+                                 target="_blank")),
+                      helpText(a("- In The World’s Poorest Countries, Demand For Birth Control Is Increasing But Access To It Isn’t",
+                                 href="https://thinkprogress.org/in-the-worlds-poorest-countries-demand-for-birth-control-is-increasing-but-access-to-it-isn-t-94183b3c3871",
+                                 target="_blank")),
+                      helpText(a("- Women's Empowerment and Family Planning: A Review of the Literature",
+                                 href="https://www.cambridge.org/core/journals/journal-of-biosocial-science/article/womens-empowerment-and-family-planning-a-review-of-the-literature/DB0C0FC1BB23407AC9C256556DAE435B",
+                                 target="_blank")))
                   )),
       tabItem(tabName = "data",
               sidebarLayout( 
