@@ -41,13 +41,21 @@ dashboardPage(
                 titlePanel("Background"),
                 h4(br(),
                    "Contraception usage serves as an indicator of the economic and social freedom of women.
-                   As a result, developing an understanding of the factors influencing the ability of 
+                   Women who are able to choose for themselves whether or not to use contraception 
+                   and what form of it to use are provided with the opportunity to take control over their 
+                   own bodies and pursue goals that fit within their own personal values. The ability of women to
+                   make these decisions is often reflected by the circumstances and settings in which they 
+                   find themselves. Throughout the world, women experience differing levels of education and 
+                   economic participation, and these differential life experiences can influence not only women's 
+                   ability to understand the purpose of contraception, but also their ability to access it.
+                   Therefore, developing an understanding of the factors that influence and indicate the ability of 
                    women to access and use different forms of contraception may help to identify areas 
-                   where interventions can increase women's freedom.",
+                   in which interventions may work to protect the basic social and economic rights and freedoms of women.",
                    br(),
                    br()),
-                h4("In many developing countries, couples use only traditional methods of contraception, such as rhythm and withdrawal, 
-                   which are less effective than modern methods available in developed countries."),
+                h4("The geographic location of persons can have significant effects on their ability to access and use contraception.
+                   In many developing countries, couples use only traditional methods of contraception, such as rhythm and withdrawal, 
+                   and these methods are often found to be less effective than modern methods available in developed countries."),
                    h4(br(),
                    img(src = "traditional_contraception_map.png",
                        width = 600,
@@ -55,8 +63,8 @@ dashboardPage(
                        align = "center"),
                    br(),
                    br(),
-                   "Increasing the availability and education of birth control world-wide reduces the number of unintended pregnancies and abortions, 
-                   improves quality of life for women, and enhances country development",
+                   "Increasing the availability of and education regarding birth control worldwide can reduce the number of unintended pregnancies and abortions, 
+                   improve quality of life for women, and enhance country development.",
                    br(),
                    br(),
                    img(src = "contracep_unmetneed.png"),
@@ -64,21 +72,21 @@ dashboardPage(
                    br(),
                    
                    
-                   "See the following for more information regarding the relationship between contraception use, 
+                   "Please see the following for more information regarding the relationship between contraception use, 
                    female empowerment, and country development:",
                    br(),
                    br()),
                 
-                   h5(helpText(a("- Women's Empowerment and Contraceptive Use: The Role of Independent versus Couples' Decision-Making, from a Lower Middle Income Country Perspective",
+                   h5(helpText(a("Women's Empowerment and Contraceptive Use: The Role of Independent versus Couples' Decision-Making, from a Lower Middle Income Country Perspective",
                                 href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0104633",
                                 target="_blank")),
-                      helpText(a("- Unmet Need for Contraception in Developing Countries: Examining Women’s Reasons for Not Using a Method",
+                      helpText(a("Unmet Need for Contraception in Developing Countries: Examining Women’s Reasons for Not Using a Method",
                                  href="https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries",
                                  target="_blank")),
-                      helpText(a("- In The World’s Poorest Countries, Demand For Birth Control Is Increasing But Access To It Isn’t",
+                      helpText(a("In The World’s Poorest Countries, Demand For Birth Control Is Increasing But Access To It Isn’t",
                                  href="https://thinkprogress.org/in-the-worlds-poorest-countries-demand-for-birth-control-is-increasing-but-access-to-it-isn-t-94183b3c3871",
                                  target="_blank")),
-                      helpText(a("- Women's Empowerment and Family Planning: A Review of the Literature",
+                      helpText(a("Women's Empowerment and Family Planning: A Review of the Literature",
                                  href="https://www.cambridge.org/core/journals/journal-of-biosocial-science/article/womens-empowerment-and-family-planning-a-review-of-the-literature/DB0C0FC1BB23407AC9C256556DAE435B",
                                  target="_blank")))
                   )),
