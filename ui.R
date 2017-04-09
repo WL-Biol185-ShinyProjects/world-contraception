@@ -38,13 +38,27 @@ dashboardPage(
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("Background"),
-                h4("Contraception usage serves an indicator of the economic and social freedm of women.
+                h4(br(),
+                   "Contraception usage serves as an indicator of the economic and social freedom of women.
                    As a result, developing an understanding of the factors influencing the ability of 
                    women to access and use different forms of contraception may help to identify areas 
                    where interventions can increase women's freedom.",
                    br(),
                    br(),
-                   "Information about modern contraceptives vs. other forms of contraceptives."))),
+                   "Information about modern contraceptives vs. other forms of contraceptives.",
+                   br(),
+                   br(),
+                   br(),
+                   "See the following for more information regarding the relationship between contraception use, 
+                   female empowerment, and country development:",
+                   br(),
+                   br()),
+                
+                   h5(helpText(a("- Women's Empowerment and Contraceptive Use: The Role of Independent versus Couples' Decision-Making, from a Lower Middle Income Country Perspective")),
+                      helpText(a("- Unmet Need for Contraception in Developing Countries: Examining Women’s Reasons for Not Using a Method")),
+                      helpText(a("- In The World’s Poorest Countries, Demand For Birth Control Is Increasing But Access To It Isn’t")),
+                      helpText(a("- Women's Empowerment and Family Planning: A Review of the Literature")))
+                  )),
       tabItem(tabName = "data",
               sidebarLayout( 
                 sidebarPanel(position = "above",
