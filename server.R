@@ -3,6 +3,8 @@ library(dplyr)
 library(ggplot2)
 library(shinythemes)
 
+World_Contraception_and_Country_Development <- read.csv("World_Contraception_and_Country_Development.csv")
+
 function(input, output) {
   geoJSON_map <- readRDS(file = "geoJSON_map.rds")
   map <- readRDS(file = "map.rds")
@@ -85,4 +87,9 @@ function(input, output) {
     }
     p
   })
+  
+  output$downloadData <- downloadHandler( filename = "World_Contraception_and_Country_Development.csv",
+                                          content = function(file) {
+                                            write.csv(World_Contraception_and_Country_Development, file)
+                                          })
 }

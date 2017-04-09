@@ -166,16 +166,29 @@ dashboardPage(
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("Data Sources"),
-                
+                h5(
                 br(),
-                fluidRow(("Our data was obtained by compiling data sheets from the Population Reference Bureau."),
-                align = "left"),
-                
+                "Our data was obtained by compiling data sheets from the Population Reference Bureau.",
+                br(),
                 br(),
                 
-                helpText(a("Click here to download our data set", align = "center") 
+                downloadButton("downloadData",
+                               label = "Download our data set",
+                               class = NULL),
+                br()),
+                h5("Original datasets:",
+                helpText(a("http://www.prb.org/DataFinder/Topic.aspx?cat=8",
+                           href="http://www.prb.org/DataFinder/Topic.aspx?cat=8",
+                           target="_blank")),
+                br(),
+                br()),
+                h5("Geojson data retrieved from:",
+                br(),
+                helpText(a("Johan Sundström GitHub",
+                           href="https://github.com/johan/world.geo.json/blob/master/countries.geo.json",
+                           target="_blank")))
                 
-                )))
+                )
+              ))
     )
   )
-)
