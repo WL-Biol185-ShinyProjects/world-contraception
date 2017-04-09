@@ -186,9 +186,23 @@ dashboardPage(
                 br(),
                 helpText(a("Johan Sundström GitHub",
                            href="https://github.com/johan/world.geo.json/blob/master/countries.geo.json",
-                           target="_blank")))
+                           target="_blank"))),
+                h5(
+                  br(),
+                  br(),
+                  "Image sources:",
+                  br(),
+                  helpText(a("https://openclipart.org/detail/7885/blue-world-map",
+                             href="https://openclipart.org/detail/7885/blue-world-map")),
+                  helpText(a("https://onlinedoctor.superdrug.com/birth-control-around-the-world/",
+                             href="https://onlinedoctor.superdrug.com/birth-control-around-the-world/")),
+                  helpText(a("http://themindbodyshift.com/index.php/2015/04/23/sustain-condoms-can-help-climate-change-through-curbing-population-growth/",
+                             href="http://themindbodyshift.com/index.php/2015/04/23/sustain-condoms-can-help-climate-change-through-curbing-population-growth/")))
+                  
+                  
+                )
                 
                 )
               ))
     )
-  )
+  
