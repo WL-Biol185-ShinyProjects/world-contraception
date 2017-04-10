@@ -124,7 +124,9 @@ dashboardPage(
                 mainPanel(position = "below",
                           tabsetPanel(
                             tabPanel("Map", leafletOutput("shinymap", height = 500, width = 950), position = "below"),
-                            tabPanel("Bar Plots", 
+                            tabPanel("Bar Plots",
+                                     fluidRow(
+                                       box(width = 12,
                                      sidebarLayout(
                                        sidebarPanel(position = "left",
                                                     width = 8,
@@ -132,7 +134,7 @@ dashboardPage(
                                                                    label = 'Select countries to plot:',
                                                                    selected = NULL,
                                                                    choices = geoJSON_map@data$name, multiple = TRUE)),
-                                     mainPanel(position = "right", plotOutput("barplot", height = 400, width = 2500)))),
+                                     mainPanel(position = "right", plotOutput("barplot", height = 400)))))),
                             tabPanel("Correlations", 
                                      sidebarLayout( 
                                        sidebarPanel(position = "left",
