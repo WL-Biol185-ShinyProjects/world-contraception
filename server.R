@@ -83,11 +83,11 @@ function(input, output) {
   })
   
   output$clickName <- renderTable({
-    nearPoints(geoJSON_map@data, geoJSON_map@data[[input$plot_click]])
+    nearPoints(geoJSON_map@data$name, geoJSON_map@data[[input$plot_click]])
   })
   
   output$brushName <- renderTable({
-    brushedPoints(geoJSON_map@data, geoJSON_map@data[[input$plot_brush]])
+    brushedPoints(geoJSON_map@data$name, geoJSON_map@data[[input$plot_brush]])
   })
   
   output$downloadData <- downloadHandler( filename = "World_Contraception_and_Country_Development.csv",
