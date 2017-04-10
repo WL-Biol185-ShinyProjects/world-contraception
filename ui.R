@@ -182,7 +182,7 @@ dashboardPage(
                            target="_blank")),
                 br(),
                 br()),
-                h5("Geojson data retrieved from:",
+                h5("GeoJSON border data retrieved from:",
                 br(),
                 helpText(a("Johan Sundström GitHub",
                            href="https://github.com/johan/world.geo.json/blob/master/countries.geo.json",
