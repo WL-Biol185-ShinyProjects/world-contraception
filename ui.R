@@ -149,7 +149,7 @@ dashboardPage(
                                                            'Death rate (annual number of deaths per 1,000 total population)' = "death_rate",
                                                            'Infant mortality rate (infant deaths per 1,000 live births)' = "infant_mortality_rate",
                                                            'Maternal deaths (deaths per 100,000 births)' = "maternal_deaths",
-                                                           'Adolescent fertility rate' = "adolescent_fertility_rate",
+                                                           'Adolescent fertility rate (births per 1,000 women ages 15-19)' = "adolescent_fertility_rate",
                                                            'Fertility rate (number of children born per woman)' = "fertility_rate",
                                                            'Male life expectancy (years)' = "male_life_expectancy",
                                                            'Female life expectancy (years)' = "female_life_expectancy",
