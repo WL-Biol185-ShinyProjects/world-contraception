@@ -72,7 +72,7 @@ dashboardPage(
                    br(),
                    "Increasing the availability of birth control worldwide and educating about its use can help to reduce
                    unintended pregnancies and abortions, improve the quality of life for women, and enhance country development
-                   by allowing more women to take part in social and economic activities that promote country growth.",
+                   by allowing more women to take part in social and economic activities.",
                    br(),
                    br(),
                    img(src = "contracep_unmetneed.png"),
