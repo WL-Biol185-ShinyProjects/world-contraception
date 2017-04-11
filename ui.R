@@ -80,7 +80,7 @@ dashboardPage(
                    br(),
                    
                    
-                   "Please see the following for more information and discussions regarding the relationship between contraception use, 
+                   "Please see the following for more information and discussion regarding the relationship between contraception use, 
                    female empowerment, and country development:",
                    br(),
                    br()),
