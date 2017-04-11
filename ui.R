@@ -127,7 +127,7 @@ dashboardPage(
                                      height = 250,
                                      leafletOutput("shinymap"), 
                                      position = "below"),
-                            tabPanel("Bar Plots", 
+                            tabPanel("Bar Plot", 
                                      width = 12,
                                      fluidRow(
                                        box(width = 12,
