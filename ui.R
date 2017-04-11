@@ -23,9 +23,9 @@ dashboardPage(
                 h5("Welcome to the World Contraception Use and Indicators of Country Development data app! 
                           This app is designed to allow the exploration of the relationship between contraception 
                           use by women throughout the world and indicators of country development. We utilize population 
-                          statistics made available by the Population Reference Bureau (PRB) to create an interactive
-                          visualization demonstrating how geographic location and the stage of developent in a country
-                          strongly influences women's use of contraception.", 
+                          statistics made available by the Population Reference Bureau (PRB) to create interactive
+                          visualizations demonstrating how geographic location and the stage of developent in a country
+                          influences women's use of contraception.", 
                           br(),
                           br(),
                           img(src = "world_map.png",
@@ -36,19 +36,19 @@ dashboardPage(
                           br(),
                           "Among our data visualizations located in the Data tab of the app, we include a map in which 
                           different inputs can be selected in order to plot an illustration of contraception use and 
-                          developmental indicators by country. Next, we include a barplot illustrating the data visualized 
+                          developmental indicators by country. Next, we include a bar plot illustrating the data visualized 
                           in the map in graphical form. In order to determine how contraception use and country development
                           are related to each other, we include a tab in which these variables can be selected on different
-                          axes so that correlations can be observed between these indicators."
+                          axes so that correlations can be observed between them."
                           ))),
       tabItem(tabName = "background",
               fluidPage(
                 theme = shinytheme("flatly"),
                 titlePanel("Background"),
                 h4(br(),
-                   "Contraception usage serves as an indicator of the economic and social freedom of women.
+                   "Contraception usage patterns serve as an indicator of the economic and social freedom of women.
                    Women who are able to choose for themselves whether or not to use contraception 
-                   and what form of it to use are provided with the opportunity to take control over their 
+                   and in what form are provided with the opportunity to take control over their 
                    own bodies and pursue goals that fit within their own personal values. The ability of women to
                    make these decisions is often reflected by the circumstances and settings in which they 
                    find themselves. Throughout the world, women experience differing levels of education and 
@@ -61,7 +61,8 @@ dashboardPage(
                    br()),
                 h4("The geographic location of persons can have significant effects on their ability to access and use contraception.
                    In many developing countries, couples use only traditional methods of contraception, such as rhythm and withdrawal, 
-                   and these methods are often found to be less effective than modern methods available in developed countries."),
+                   and these methods are often found to be less effective than modern methods that are more widely available in 
+                   developed countries."),
                    h4(br(),
                    img(src = "traditional_contraception_map.png",
                        width = 600,
@@ -69,8 +70,9 @@ dashboardPage(
                        align = "center"),
                    br(),
                    br(),
-                   "Increasing the availability of and education regarding birth control worldwide can reduce the number of unintended pregnancies and abortions, 
-                   improve quality of life for women, and enhance country development.",
+                   "Increasing the availability of birth control worldwide and educating about its use can help to reduce
+                   unintended pregnancies and abortions, improve the quality of life for women, and enhance country development
+                   by allowing more women to take part in social and economic activities that promote country growth.",
                    br(),
                    br(),
                    img(src = "contracep_unmetneed.png"),
@@ -78,7 +80,7 @@ dashboardPage(
                    br(),
                    
                    
-                   "Please see the following for more information regarding the relationship between contraception use, 
+                   "Please see the following for more information and discussions regarding the relationship between contraception use, 
                    female empowerment, and country development:",
                    br(),
                    br()),
