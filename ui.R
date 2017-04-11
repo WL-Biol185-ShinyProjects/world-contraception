@@ -138,7 +138,7 @@ dashboardPage(
                                                              selected = NULL,
                                                              choices = geoJSON_map@data$name, multiple = TRUE)),
                                      box(width = 12, 
-                                         plotOutput("barplot", height = 400)))),
+                                         plotOutput("barplot", height = 500)))),
                             tabPanel("Correlations", 
                                      width = 12,
                                      fluidRow( 
