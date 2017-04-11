@@ -168,8 +168,7 @@ dashboardPage(
                                                                  label = "Color by GDP",
                                                                  value = FALSE)),
                                        box(width = 12, 
-                                           plotOutput("correlations", click = "plot_click"), 
-                                           verbatimTextOutput("clickName"), 
+                                           plotOutput("correlations"),
                                            position ="below")
                                       ))))),
       tabItem(tabName = "sources",
