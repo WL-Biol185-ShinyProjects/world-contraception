@@ -165,9 +165,11 @@ dashboardPage(
                                                    checkboxInput(inputId = "colorBy",
                                                                  label = "Color by GDP",
                                                                  value = FALSE)),
-                                       box(width = 12, plotOutput("correlations", click = "plot_click", brush = "plot_brush"), position ="below"),
-                                       box(title = "Country", width = 12, 
-                                           fluidRow(tableOutput("clickName"), tableOutput("clickBrush")))))))),
+                                       box(width = 12, 
+                                           plotOutput("correlations", click = "plot_click"), 
+                                           verbatimTextOutput("clickName"), 
+                                           position ="below")
+                                      ))))),
       tabItem(tabName = "sources",
               fluidPage(
                 theme = shinytheme("flatly"),
