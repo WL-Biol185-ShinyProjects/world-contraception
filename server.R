@@ -82,6 +82,9 @@ function(input, output) {
     p
   })
   
+  output$clickName <- renderText({
+    paste("Country:", geoJSON_map@data[[input$plot_click$name]])
+  })
   
   output$downloadData <- downloadHandler( filename = "World_Contraception_and_Country_Development.csv",
                                           content = function(file) {
